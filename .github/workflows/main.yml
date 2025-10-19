@@ -2,11 +2,14 @@ name: Go CI/CD (tracker)
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '**'          # реагировать на все ветки
     tags:
-      - 'v*.*.*'
+      - 'v*'          # реагировать на все теги, начинающиеся с v
   pull_request:
-    branches: [ main ]
+    branches:
+      - '**'
+
 
 jobs:
   # проверка и тесты 
